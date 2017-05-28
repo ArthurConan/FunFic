@@ -1,0 +1,264 @@
+#header {
+    border-style: solid;
+    border-width: medium;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: none;
+    background-color: #999999;
+    width: 600px;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    padding: 10px;
+}
+
+#base {
+    border-style: solid;
+    border-width: medium;
+    border-radius: 15px;
+    background-color: rgba(119, 119, 119, 0.5);
+    width: 600px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding: 10px;
+}
+
+#footer {
+    border-style: solid;
+    border-width: medium;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-style: none;
+    background-color: #999999;
+    width: 600px;
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    padding: 10px;
+}
+
+#form {
+    text-align: left;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+hr {
+    border: 0;
+    height: 0.9px;
+    color: #000000;
+    background-color: #000000;
+}
+
+.block {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #999999;
+    width: 500px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+}
+
+.warning {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #D63333;
+    width: 500px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+}
+
+.dialog {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #999999;
+    width: 500px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+}
+
+.dialog_left {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #999999;
+    width: 500px;
+    margin-right: auto;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+}
+
+.dialog_right {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #999999;
+    width: 500px;
+    margin-left: auto;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+}
+
+a.button {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 7px;
+    color: #000000;
+    text-decoration: none;
+}
+
+a.button:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.button:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #888888;
+}
+
+a.button:active {
+    color: #000000;
+    text-decoration: none;
+    background-color: #BBBBBB;
+}
+
+a.button_long {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 7px;
+    color: #000000;
+    display: block;
+    width: 97%;
+    text-decoration: none;
+    margin: 3px;
+}
+
+a.button_long:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.button_long:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.button_long:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #888888;
+}
+
+a.button_long:active {
+    color: #000000;
+    text-decoration: none;
+    background-color: #BBBBBB;
+}
+
+img.dialog_avatar {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+span.anchor {
+    z-index: -1;
+    padding-top: 45px;
+}
+
+a.message_header {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.message_header:link {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.message_header:visited {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.message_header:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.message_header:active {
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.message_header:focus {
+    outline: 0;
+    color: #333333;
+    text-decoration: underline;
+}
+
+a.item_name {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.item_name:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.item_name:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.item_name:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.item_name:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.item_name:focus {
+    outline: 0;
+    color: #000000;
+    text-decoration: none;
+}
