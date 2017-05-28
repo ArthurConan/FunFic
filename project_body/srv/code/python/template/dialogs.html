@@ -1,0 +1,40 @@
+{%- extends "base.html" %}
+{%- block title %}Dialogs{%- endblock %}
+{%- block head %}
+    {{- super() }}
+    <style type="text/css">
+    html {
+        background-color: #111111;
+        background: url(/dialogs-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+{%- endblock %}
+{%- block content %}
+    {%- if message %}
+    <div class="warning">{{ message|e }}</div>
+    {%- endif %}
+    {%- if nodes %}
+    {%- for node in nodes %}
+    <div class="dialog">
+        {%- if node.avatar %}
+        <div style="float: left;">
+            <img class="dialog_avatar" src="{{ node.avatar|e }}" alt="" />
+        </div>
+        {%- endif %}
+        <div style="float: left; padding: 7px;">
+            <span class="anchor" id="id{{ node.id|e }}"><a class="item_name" href="#id{{ node.id|e }}">{{ node.name|e }}</a></span><br />
+            {{ node.info|e }}
+        </div>
+        <div style="float: right; text-align: right;">
+            <a class="button" href="{{ node.history_link|e }}">History</a><br /><br />
+            <a class="button" href="{{ node.statistics_link|e }}">Statistics</a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    {%- endfor %}
+    {%- endif %}
+{%- endblock %}

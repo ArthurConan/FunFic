@@ -1,0 +1,29 @@
+{%- extends "base.html" %}
+{%- block title %}Statistics{%- endblock %}
+{%- block head %}
+    {{- super() }}
+    <style type="text/css">
+    html {
+        background-color: #111111;
+        background: url(/statistics-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+{%- endblock %}
+{%- block content %}
+    {%- if message %}
+    <div class="warning">{{ message|e }}</div>
+    {%- endif %}
+    {%- if body %}
+    <div class="dialog">
+        <p style="word-wrap: break-word; word-break: break-all;">
+            {%- for line in body %}
+            {{ line|e }}<br />
+            {%- endfor %}
+        </p>
+    </div>
+    {%- endif %}
+{%- endblock %}

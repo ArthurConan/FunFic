@@ -1,0 +1,40 @@
+{%- extends "base.html" %}
+{%- block title %}Notes{%- endblock %}
+{%- block head %}
+    {{- super() }}
+    <style type="text/css">
+    html {
+        background-color: #111111;
+        background: url(/notes-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+{%- endblock %}
+{%- block content %}
+    {%- if message %}
+    <div class="warning">{{ message|e }}</div>
+    {%- endif %}
+    <div class="block">
+        <form action="/notes/add" method="POST">
+            <div id="form">
+                <textarea name="text"></textarea><br />
+                <input type="hidden" name="token" value="{{ token|e }}">
+                <input type="submit" value="Add note">
+            </div>
+        </form>
+    </div>
+    {%- if notes %}
+    {%- for note in notes %}
+    <div class="block">
+        <p style="word-wrap: break-word; word-break: break-all;">
+            {%- for line in note.text.splitlines() %}
+            {{ line|e }}<br />
+            {%- endfor %}
+        </p>
+    </div>    
+    {%- endfor %}
+    {%- endif %}
+{%- endblock %}

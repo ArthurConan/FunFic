@@ -1,0 +1,36 @@
+{%- extends "base.html" %}
+{%- block title %}Dialog{%- endblock %}
+{%- block head %}
+    {{- super() }}
+    <style type="text/css">
+    html {
+        background-color: #111111;
+        background: url(/dialog-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+{%- endblock %}
+{%- block content %}
+    {%- if message %}
+    <div class="warning">{{ message|e }}</div>
+    {%- endif %}
+    {%- if nodes %}
+    {%- for node in nodes %}
+    <div class="{{ node.class_|e }}">
+        <span class="anchor" id="{{ node.id_|e }}"><a class="message_header" href="#{{ node.id_|e }}">{{ node.author|e }} - {{ node.timestamp|e }}</a></span><br />
+        <p style="word-wrap: break-word; word-break: break-all;">
+            {%- for line in node.body %}
+            {{ line|e }}<br />
+            {%- endfor %}
+        </p>
+        {%- if node.lost_attachments %}
+        <hr />
+        {{ node.lost_attachments|e }}
+        {%- endif %}
+    </div>    
+    {%- endfor %}
+    {%- endif %}
+{%- endblock %}

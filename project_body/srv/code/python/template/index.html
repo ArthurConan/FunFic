@@ -1,0 +1,25 @@
+{%- extends "base.html" %}
+{%- block title %}Index{%- endblock %}
+{%- block head %}
+    {{- super() }}
+    <style type="text/css">
+    html {
+        background-color: #111111;
+        background: url(/index-background.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+{%- endblock %}
+{%- block content %}
+    <div class="block">
+        <div style="text-align: center;">Welcome to S.H.I.V.A.!</div><br />
+        {%- for module in modules %}
+        {%- if module.instance.module_is_avalaible() %}
+        <a class="button_long" href="/{{ module.path|e }}/">{{ module.name|e }}</a>
+        {%- endif %}
+        {%- endfor %}
+    </div>
+{%- endblock %}
